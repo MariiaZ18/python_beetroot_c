@@ -1,5 +1,3 @@
 print('Play with git')
 
-print('Play with git again')
-
-print('play')
+print('Play with git again 1 ')

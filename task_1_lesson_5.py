@@ -15,7 +15,6 @@ print(s.format(name, day))
 
 print('\n3 Good day {}! {} is a perfect day to learn some python'.format(name, day))
 
-print('\n4 Good day' + ' Mariia' + '!' + ' Friday' + ' is a perfect day' + ' to learn some' + ' python\n')
 
 l = 'Good day Mariia! Friday is a perfect day to learn some python'
 print('Length of "Good day Mariia! Friday is a perfect day to learn some python" is -', len(l))

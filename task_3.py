@@ -4,7 +4,6 @@
 
 a = 12
 b = 8
-
 # Addition
 print(f'{a} + {b} =', a + b)
 # subtraction

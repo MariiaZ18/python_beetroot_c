@@ -11,19 +11,19 @@ def make_operation(operator, *args):
     if operator == '+':
         for num in args:
             result += num
-        print(result)
+        return result
     elif operator == '-':
         for num in args:
             result -= num
-        print(result)
+        return result
     elif operator == '*':
         for num in args:
             result *= num
-        print(result)
+        return result
     else:
         result = 0
-        print(result)
     return result
 
 
-make_operation('-', 5, 5, -10, -20)
+if __name__ == '__main__':
+    print(make_operation('-', 5, 5, -10, -20))

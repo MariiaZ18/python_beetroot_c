@@ -6,7 +6,6 @@ def oops():
     my_list = ['Harry', 'Potter', 'and', 'the', 'Sorcerer\'s', 'Stone']
     print(my_list[6])
 
-
 def main():
     try:
         oops()

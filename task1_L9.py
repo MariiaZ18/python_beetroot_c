@@ -10,7 +10,8 @@ def greatest_number():
         i = random.randint(1, 2555)
         my_list.append(i)
     print(my_list)
-    print(max(my_list))
+    max_of_my_list = max(my_list)
+    print(f'The largest number of list is - {max_of_my_list}')
 
 
 if __name__ == '__main__':

@@ -22,6 +22,5 @@ def main():
         return string_2
         break
 
-
 if __name__ == '__main__':
     print(main())

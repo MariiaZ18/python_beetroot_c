@@ -21,8 +21,7 @@ def common_numbers():
     for h in list_1:
         if h in list_2:
             result.append(h)
-        return result
-
+        print(f'Exclusive common numbers - {result}')
 
 if __name__ == '__main__':
-    print(common_numbers())
+    common_numbers()

@@ -7,7 +7,7 @@
 
 
 def fun_file():
-    my_string = "Hello file world!"
+    my_string = "Hello file world !"
     with open("myFile.txt", "w") as write_file:
         write_file.write(my_string)
 

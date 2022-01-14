@@ -7,10 +7,17 @@
 
 
 def fun_file():
-    my_string = input('Please enter some string: ')
-    with open("myJsonFile.txt", "w") as write_file:
+    my_string = "Hello file world!"
+    with open("myFile.txt", "w") as write_file:
         write_file.write(my_string)
+
+
+def reads_file():
+    with open("myFile.txt", "r") as read_file:
+        read_f = read_file
+    print(read_f)
 
 
 if __name__ == '__main__':
     fun_file()
+    reads_file()

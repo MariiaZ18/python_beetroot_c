@@ -13,6 +13,7 @@ def fun_total_price():
         "orange": 1.5,
         "pear": 3
     }
+
     a = list(stock.values())
     b = list(prices.values())
     keys_for_dict = ["banana", "apple", "orange", "pear"]

@@ -14,4 +14,5 @@ class Dog:
 
 
 simon = Dog('Simon', 12)
+
 print(simon.human_age())

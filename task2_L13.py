@@ -5,6 +5,7 @@
 # remove_positives (takes a list of integers and returns it without positive numbers
 # filter_leaps (takes a list of dates (integers) and removes those that are not 'leap years'
 
+
 class Mathematician:
     def square_nums(self, list_sq: list):
         self.list_sq = list_sq

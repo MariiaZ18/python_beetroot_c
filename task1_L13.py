@@ -1,34 +1,62 @@
-# Mathematician
-# Implement a class Mathematician which is a helper class for doing math operations on lists
-# The class doesn't take any attributes and only has methods:
-# square_nums (takes a list of integers and returns the list of squares)
-# remove_positives (takes a list of integers and returns it without positive numbers
-# filter_leaps (takes a list of dates (integers) and removes those that are not 'leap years'
+# School
+# Make a class structure in python representing people at school.
+# Make a base class called Person, a class called Student, and another one called Teacher.
+# Try to find as many methods and attributes as you can which belong to different classes, and keep in mind which are common and which are not.
+# For example, the name should be a Person attribute, while salary should only be available to the teacher.
 
-class Mathematician:
-    def square_nums(self, list_sq: list):
-        self.list_sq = list_sq
-        list_s = []
-        list_s = [i * i for i in list_sq]
-        return f'Squares of numbers: {list_s}'
+class People:
+    def __init__(self, first_name: str, last_name: str, age: int):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-    def remove_positives(self, list_re: list):
-        self.list_re = list_re
-        list_r = []
-        list_r = [i for i in list_re if i < 0]
-        return f'Only negative numbers: {list_r}'
+    def __repr__(self):
+        return f"{self.first_name} {self.last_name}"
 
-    def filter_leaps(self, list_le):
-        self.list_le = list_le
-        list_l = []
-        list_l = [i for i in list_le if i % 4 == 0]
-        return f'Leap years: {list_l}'
+        # For call to str(). Prints readable form
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def full_name(self):
+        full_name = f'{self.first_name} {self.last_name}'
+        return full_name
+
+    def make_email(self):
+        maked_email = f'{self.full_name_for_em()}' + '@gmail.com'
+        print('Email: ')
+        return maked_email.lower()
+
+    def full_name_for_em(self):
+        full_name_for_e = f'{self.first_name}{self.last_name}'
+        return full_name_for_e
 
 
-m = Mathematician()
-a = [7, 11, 5, 4]
-b = [26, -11, -8, 13, -90]
-c = [2001, 1884, 1995, 2003, 2020]
-print(a, m.square_nums([7, 11, 5, 4]))
-print(b, m.remove_positives([26, -11, -8, 13, -90]))
-print(c, m.filter_leaps([2001, 1884, 1995, 2003, 2020]))
+class Student(People):
+
+    def __init__(self, first_name: str, last_name: str, age: int, year_of_studies: int, specialty: str):
+        super().__init__(first_name, last_name, age)
+        self.year_of_studies = year_of_studies
+        self.specialty = specialty
+
+    def student_info(self):
+        info = f'\n{self.full_name()} {self.age}, years old.\nStudies at the university VSB-TUO.\nStudy programme: {self.specialty}'
+        return info
+
+
+class Teacher(People):
+    def __init__(self, first_name: str, last_name: str, age: int, teaches: str):
+        super().__init__(first_name, last_name, age)
+        self.teaches = teaches
+
+    def return_info(self):
+        return f'{self.full_name()}.\nTeaches: {self.teaches}'
+
+
+kaja = Student('Karolína', 'Skokanová', 20, 1, 'Computer Science')
+print(kaja.student_info())
+print(kaja.make_email().__repr__())
+print()
+test = Teacher('Lesia', 'Zeikan', 54, 'Logic for informatics')
+print(test.return_info())
+print(test.make_email())

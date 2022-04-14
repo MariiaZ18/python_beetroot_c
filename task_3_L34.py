@@ -24,7 +24,6 @@ def print_weather():
     f_str = f"Temperature in {city} is {temp}{degree_sign}, feels like {feels}{degree_sign}. Wind speed - {speed} km/h"
     print(f_str)
 
-
 if __name__ == '__main__':
     print_weather()
     # print(get_weather())

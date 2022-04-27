@@ -11,5 +11,4 @@ c.send(message)
 data = c.recv(BUFFER_SIZE)
 print(data)
 message = input("Enter message: ").encode()
-
 c.close()

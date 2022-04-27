@@ -17,7 +17,6 @@ class Counter(Thread):
             self.count += 1
         print(self.count)
 
-
 def main():
     threads_list = []
     counter = Counter()

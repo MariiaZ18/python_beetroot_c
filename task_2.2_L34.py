@@ -3,6 +3,9 @@ import json
 
 import requests
 
+URL = 'https://api.pushshift.io/reddit/comment/search/'
+par = {'subreddit': 'TheSimsBuilding', 'sort': 'desc', 'sort_type': 'created_utc'}
+
 
 def get_comment(URL, par):
     data = requests.get(URL, params=par)
@@ -22,8 +25,6 @@ def main():
 
 
 def print_comm():
-    URL = 'https://api.pushshift.io/reddit/comment/search/'
-    par = {'subreddit': 'TheSimsBuilding', 'sort': 'desc', 'sort_type': 'created_utc'}
     data = get_comment(URL=URL, par=par)
     new_list = []
     list_of_dict = data.get('data')
